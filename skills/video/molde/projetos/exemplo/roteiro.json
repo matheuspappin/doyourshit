@@ -1,0 +1,134 @@
+{
+  "titulo": "WavBox institucional, rascunho 1",
+  "formato": { "largura": 1080, "altura": 1920, "fps": 30 },
+  "transicao": { "tipo": "corte", "duracao": 0.2 },
+  "trilha": { "arquivo": "assets/trilha.mp3", "volume": 0.85, "bpm": 120, "inicio": 0 },
+  "cenas": [
+    {
+      "id": "c01",
+      "tipo": "titulo",
+      "batidas": 4,
+      "linhas": ["Mandou o mix", "por e-mail?"],
+      "sub": "E o retorno veio num áudio de 4 minutos",
+      "alerta": true
+    },
+    {
+      "id": "c02",
+      "tipo": "video",
+      "batidas": 4,
+      "arquivo": "assets/g-c02.mp4",
+      "movimento": "zoom-in",
+      "legenda": "Estúdio · 02:14 · sozinho",
+      "transicao": "flash"
+    },
+    {
+      "id": "c03",
+      "tipo": "titulo",
+      "batidas": 4,
+      "linhas": ["Senta aqui", "comigo."],
+      "sub": "SessionBridge, do WavBox · ao vivo"
+    },
+    {
+      "id": "c04",
+      "tipo": "tela",
+      "batidas": 6,
+      "arquivo": "assets/tela-sessionbridge.png",
+      "titulo": "Sua DAW\nna tela do outro",
+      "legenda": "Quem visita vê, ouve o master e assume o controle",
+      "foco": { "x": 0.5, "y": 0.45, "escala": 1.25 },
+      "transicao": "slide"
+    },
+    {
+      "id": "c05",
+      "tipo": "etiqueta",
+      "batidas": 4,
+      "codigo": "K7Q-2XM",
+      "rotulo": "Código da sala",
+      "titulo": "Um código.\nE a sala abriu."
+    },
+    {
+      "id": "c06",
+      "tipo": "video",
+      "batidas": 4,
+      "arquivo": "assets/g-c06.mp4",
+      "movimento": "pan-dir",
+      "legenda": "São Paulo / Lisboa · mesma sessão",
+      "transicao": "flash"
+    },
+    {
+      "id": "c07",
+      "tipo": "titulo",
+      "batidas": 4,
+      "linhas": ["Ouve e me diz", "o que achou."],
+      "sub": "WavBox web · depois da sessão"
+    },
+    {
+      "id": "c08",
+      "tipo": "tela",
+      "batidas": 6,
+      "arquivo": "assets/tela-faixa.png",
+      "titulo": "Comentário\nno segundo certo",
+      "legenda": "Versões, aprovação e a marca do seu estúdio",
+      "foco": { "x": 0.5, "y": 0.6, "escala": 1.4 },
+      "transicao": "slide"
+    },
+    {
+      "id": "c09",
+      "tipo": "etiqueta",
+      "batidas": 4,
+      "codigo": "V03",
+      "rotulo": "Versão",
+      "titulo": "Aprovada."
+    },
+    {
+      "id": "c10",
+      "tipo": "marca",
+      "batidas": 8,
+      "sub": "Música feita junto",
+      "chamada": "wavbox.app",
+      "transicao": "fade"
+    }
+  ],
+  "geracoes": [
+    {
+      "id": "g-c02-quadro",
+      "endpoint": "higgsfield-ai/soul/standard",
+      "parametros": {
+        "prompt": "cinematic photo, music producer alone in a dark home studio at night, face lit only by two monitor screens showing a DAW, tired, headphones around neck, 35mm film grain, shallow depth of field, near-black background, no text, no logos",
+        "aspect_ratio": "9:16",
+        "resolution": "1080p"
+      },
+      "saida": "assets/g-c02-quadro.png"
+    },
+    {
+      "id": "g-c02",
+      "endpoint": "kling-video/v3.0/pro/image-to-video",
+      "imagem_de": "g-c02-quadro",
+      "parametros": {
+        "prompt": "slow push-in on the producer, he exhales and rubs his eyes, monitor light flickers softly, static camera otherwise, no text",
+        "duration": 5
+      },
+      "saida": "assets/g-c02.mp4"
+    },
+    {
+      "id": "g-c06-quadro",
+      "endpoint": "higgsfield-ai/soul/standard",
+      "parametros": {
+        "prompt": "cinematic photo, young musician in a small bedroom studio wearing closed headphones, smiling and nodding to the music, laptop glow, warm practical light, 35mm film grain, dark background, no text, no logos",
+        "aspect_ratio": "9:16",
+        "resolution": "1080p"
+      },
+      "saida": "assets/g-c06-quadro.png"
+    },
+    {
+      "id": "g-c06",
+      "endpoint": "kling-video/v3.0/pro/image-to-video",
+      "imagem_de": "g-c06-quadro",
+      "parametros": {
+        "prompt": "the musician nods to the beat and raises a hand in approval, subtle handheld camera, no text",
+        "duration": 5
+      },
+      "saida": "assets/g-c06.mp4"
+    }
+  ]
+}

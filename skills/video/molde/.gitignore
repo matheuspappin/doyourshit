@@ -1,0 +1,10 @@
+node_modules/
+out/
+# Mídia pesada e gerada fica fora do git; o roteiro, a ficha de estilo e os gastos entram.
+projetos/*/assets/
+projetos/*/saida/
+projetos/*/referencia/*.mp4
+projetos/*/referencia/*.mov
+projetos/*/referencia/quadros/
+projetos/*/.render-props.json
+projetos/*/estimativa.json

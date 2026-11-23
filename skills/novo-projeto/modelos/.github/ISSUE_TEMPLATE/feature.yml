@@ -1,0 +1,39 @@
+name: Feature
+description: Algo novo ou uma mudança de comportamento
+title: "[Feature] "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A feature só entra no MVP se responder "sim" às 3 perguntas do `docs/MVP.md`; feature grande ganha spec e plano aprovados antes do código. Se gerar custo (serviço, plano, assento), diga aqui: `docs/CUSTOS.md`.
+  - type: dropdown
+    id: produto
+    attributes:
+      label: Produto
+      options: [{{AREAS}}]
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Que problema resolve, e para quem
+      description: Produtor que hospeda, convidado, cliente que revisa, a equipe...
+    validations:
+      required: true
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Proposta
+  - type: textarea
+    id: aceite
+    attributes:
+      label: Como saber que ficou pronto
+      placeholder: "- [ ] ..."
+  - type: dropdown
+    id: custo
+    attributes:
+      label: Gera custo?
+      options: [Não, Sim (descreva na proposta)]
+    validations:
+      required: true

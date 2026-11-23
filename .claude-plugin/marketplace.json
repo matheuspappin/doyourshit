@@ -1,0 +1,11 @@
+{
+  "name": "matheus",
+  "owner": { "name": "Matheus Pappin" },
+  "plugins": [
+    {
+      "name": "doyourshit",
+      "source": "./",
+      "description": "O método do Matheus: da ideia ao MVP em blocos que se fecham, com testes, registro e documentação."
+    }
+  ]
+}

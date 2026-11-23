@@ -1,0 +1,66 @@
+name: Bug
+description: Algo que funcionava ou deveria funcionar e não funciona
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Um problema por issue. Guia: `docs/EQUIPE.md` › "Relatar bug e problema de usabilidade". Nunca cole senha, token ou o conteúdo do `.env`.
+  - type: dropdown
+    id: produto
+    attributes:
+      label: Produto
+      options: [{{AREAS}}]
+    validations:
+      required: true
+  - type: input
+    id: ambiente
+    attributes:
+      label: Ambiente
+      description: Sistema, navegador, versão (ou commit/ramo)
+      placeholder: "Windows 11, Chrome 140, ramo bug/31-..."
+    validations:
+      required: true
+  - type: input
+    id: sessao
+    attributes:
+      label: Papel e rede
+      description: Quem hospeda ou convidado (app ou navegador), o outro lado, a rede
+      placeholder: "Conta de teste A, celular na rede 4G"
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que esperava e o que aconteceu
+    validations:
+      required: true
+  - type: dropdown
+    id: frequencia
+    attributes:
+      label: Frequência
+      options: [Sempre, Às vezes, Uma vez]
+    validations:
+      required: true
+  - type: dropdown
+    id: prioridade
+    attributes:
+      label: Prioridade sugerida
+      description: "P0 sessão não abre/perde dado/segurança; P1 sério ou bloqueia a versão; P2 tem contorno; P3 polimento"
+      options: [P0, P1, P2, P3]
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostico
+    attributes:
+      label: Diagnóstico, logs e imagens
+      description: '"Copiar diagnóstico" do app dos dois lados, trechos de log, prints ou vídeo'
+      render: text

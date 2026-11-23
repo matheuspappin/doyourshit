@@ -1,0 +1,61 @@
+name: Usabilidade
+description: Alguém travou, se confundiu ou demorou numa tarefa (teste de usabilidade ou relato de testador)
+title: "[Usabilidade] "
+labels: ["usabilidade"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Um problema por issue. Roteiro e gravidades: `docs/testes/USABILIDADE.md`.
+  - type: dropdown
+    id: produto
+    attributes:
+      label: Produto
+      options: [{{AREAS}}]
+    validations:
+      required: true
+  - type: input
+    id: quem
+    attributes:
+      label: Quem testou
+      description: Perfil (sem nome completo nem contato), sistema, versão
+      placeholder: "Produtor de trap, Windows 11, FL 21, ramo base-0.4.3"
+    validations:
+      required: true
+  - type: input
+    id: tarefa
+    attributes:
+      label: Tarefa
+      placeholder: "Convidar alguém para a sessão"
+    validations:
+      required: true
+  - type: textarea
+    id: observado
+    attributes:
+      label: O que a pessoa fez
+    validations:
+      required: true
+  - type: textarea
+    id: palavras
+    attributes:
+      label: Palavras dela (entre aspas)
+  - type: dropdown
+    id: gravidade
+    attributes:
+      label: Gravidade
+      options: ["Bloqueou (não concluiu sem ajuda) → P1", "Atrasou (erro ou mais de 2 min) → P2", "Incomodou → P3"]
+    validations:
+      required: true
+  - type: input
+    id: quantos
+    attributes:
+      label: Quantas pessoas tiveram o mesmo problema
+      placeholder: "2 de 3"
+  - type: textarea
+    id: sugestao
+    attributes:
+      label: Sugestão (opcional)
+  - type: textarea
+    id: anexos
+    attributes:
+      label: Imagens ou trecho do vídeo

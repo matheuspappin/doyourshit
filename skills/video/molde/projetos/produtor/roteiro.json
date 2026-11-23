@@ -1,0 +1,88 @@
+{
+  "titulo": "WavBox para produtor, 18 s",
+  "formato": { "largura": 1080, "altura": 1920, "fps": 30 },
+  "transicao": { "tipo": "corte", "duracao": 0.2 },
+  "trilha": {
+    "arquivo": "assets/trilha.mp3",
+    "volume": 0.85,
+    "bpm": 120,
+    "nota": "Falta a trilha: 120 BPM, 18 s, licença comercial."
+  },
+  "cenas": [
+    {
+      "id": "c01",
+      "tipo": "titulo",
+      "batidas": 4,
+      "linhas": ["Você produz", "pra artista", "à distância?"],
+      "sub": "Esse vídeo é pra você",
+      "nota": "Quem: chama o produtor pelo nome da situação dele."
+    },
+    {
+      "id": "c02",
+      "tipo": "titulo",
+      "batidas": 4,
+      "linhas": ["No Discord,", "o som chega", "detonado."],
+      "sub": "E o artista não ouve o que você ouve",
+      "alerta": true,
+      "transicao": "flash",
+      "nota": "Dor 1: sessão ao vivo na gambiarra."
+    },
+    {
+      "id": "c03",
+      "tipo": "titulo",
+      "batidas": 4,
+      "linhas": ["Aos 1:32", "tá alto.", "Qual era a V3?"],
+      "sub": "O retorno do artista, no zap",
+      "alerta": true,
+      "nota": "Dor 2: aprovação perdida no WhatsApp."
+    },
+    {
+      "id": "c04",
+      "tipo": "marca",
+      "batidas": 4,
+      "sub": "Sessão ao vivo + aprovação, num lugar só",
+      "transicao": "flash",
+      "nota": "Virada: o nome do produto e o que ele junta."
+    },
+    {
+      "id": "c05",
+      "tipo": "tela",
+      "batidas": 6,
+      "arquivo": "assets/sb-visita.png",
+      "titulo": "O artista vê\ne ouve sua DAW\nao vivo.",
+      "legenda": "Som do master direto do plugin · e pode assumir o controle",
+      "foco": { "x": 0.45, "y": 0.35, "escala": 1.35 },
+      "nota": "Solução 1 com a tela real do SessionBridge."
+    },
+    {
+      "id": "c06",
+      "tipo": "onda",
+      "batidas": 6,
+      "titulo": "Comentário no\nsegundo certo\nda música.",
+      "versao": "V03 · Mix 2",
+      "comentarios": [
+        { "posicao": 0.36, "tempo": "1:32", "tag": "Voz · artista", "texto": "Voz mais à frente no refrão." },
+        { "posicao": 0.72, "tempo": "2:31", "tag": "Arranjo · artista", "texto": "O final pode cortar seco." }
+      ],
+      "nota": "Solução 2: o mesmo comentário do zap, agora preso na música."
+    },
+    {
+      "id": "c07",
+      "tipo": "etiqueta",
+      "batidas": 3,
+      "codigo": "V03",
+      "rotulo": "Versão",
+      "titulo": "E aprova\naqui mesmo.",
+      "nota": "Prova: a versão aprovada, sem bagunça."
+    },
+    {
+      "id": "c08",
+      "tipo": "marca",
+      "batidas": 5,
+      "sub": "Produza junto. Aprove sem bagunça.",
+      "chamada": "Comece grátis · wavbox.app",
+      "transicao": "fade",
+      "nota": "Chamada."
+    }
+  ]
+}
