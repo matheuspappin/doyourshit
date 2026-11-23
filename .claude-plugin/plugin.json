@@ -1,6 +1,6 @@
 {
   "name": "doyourshit",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "O método do Matheus para levar um projeto da ideia ao MVP: base documentada, roteiro de testes em blocos (T0…Tn) que se fecham um a um, achados numerados, registro do recebido × feito, testes no navegador pelo Claude e envio só com autorização.",
   "author": { "name": "Matheus Pappin" },
   "keywords": ["mvp", "testes", "registro", "roteiro", "metodo", "pt-BR"]

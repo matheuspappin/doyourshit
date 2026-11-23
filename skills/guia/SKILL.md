@@ -74,7 +74,8 @@ Comece a preparar o lançamento quando o roteiro chegar à etapa de ponta a pont
 1. **Vendas** (agente `vendas`): se ainda não existe, o `docs/VENDAS.md`; se existe, atualize com o que os blocos mostraram (preço, o que funciona de verdade, provas com números).
 2. **Textos** (`/doyourshit:textos`, modo 2): revisão de todas as telas que a pessoa da ponta a ponta vai ver, da página de venda e dos e-mails.
 3. **Vídeo** (`/doyourshit:video`): de 1 a 3 vídeos curtos (15 a 20 s) para os canais do `docs/VENDAS.md`, com telas reais do produto já testado.
-4. **Lista técnica:** domínio e HTTPS, backup, termos e privacidade, pagamento fora do modo de teste (só com o "sim" do dono, porque passa a gerar cobrança), monitoramento de erros e um plano de hotfix.
+4. **Documentação** (`/doyourshit:documentar`): o README e o manual para quem vai usar, conferidos contra o que os blocos provaram.
+5. **Lista técnica:** domínio e HTTPS, backup, termos e privacidade, pagamento fora do modo de teste (só com o "sim" do dono, porque passa a gerar cobrança), monitoramento de erros e um plano de hotfix.
 
 Depois do lançamento, um roteiro novo por versão (1.1, 1.2…), no mesmo formato, e a viabilidade refeita com os números reais (clientes, custo por mês, ritmo).
 

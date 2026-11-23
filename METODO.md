@@ -46,7 +46,7 @@ O `/doyourshit:guia` olha quais arquivos existem e chama a peça certa; você n�
 | Cada bloco | `/doyourshit:bloco` + agente `testador` + `/doyourshit:testar-navegador` | Roteiro com bloco aberto | Boletim, achados, ritmo medido |
 | Bloco com tela | + `/doyourshit:textos` (modo 2) e conferência da marca | O bloco mostra tela ou texto para quem usa | Achados de texto e visual (risco B) |
 | Antes da ponta a ponta | Agente `vendas`, `/doyourshit:textos` (modo 2), `/doyourshit:video` | Fechou o último bloco antes da ponta a ponta | Oferta e canais, textos revisados, vídeos curtos |
-| Lançamento | `/doyourshit:guia` (fase 6) | Ponta a ponta fechada | Lista técnica; depois, roteiro por versão |
+| Lançamento | `/doyourshit:guia` (fase 6) e `/doyourshit:documentar` | Ponta a ponta fechada, ou repositório que vai ser publicado | README e manual conferidos, lista técnica; depois, roteiro por versão |
 | Todo dia | `/doyourshit:registro`, `/doyourshit:comecar`, `/doyourshit:relatar`, `/doyourshit:novidades` | Mudança, issue, achado, volta ao trabalho | Diário, worktree, issue, resumo |
 | Gente nova | `/doyourshit:treinamento` | Alguém entra no projeto | Treino com o progresso salvo |
 
@@ -176,6 +176,7 @@ Um plugin do Claude Code, o **kit**, instalado uma vez e usado em todo projeto:
 | `/doyourshit:registro` | Diário, base, comparação e preparo do envio |
 | `/doyourshit:relatar`, `/doyourshit:comecar`, `/doyourshit:novidades` | Achado → issue; issue → ramo e worktree; o que mudou |
 | `/doyourshit:viabilidade` | Custo, tempo (no ritmo medido do método) e mercado, antes de construir |
+| `/doyourshit:documentar` | Escreve o README e os docs a partir do estado real, conferindo comandos e links |
 | `/doyourshit:textos` | Define a voz no começo e revisa telas, e-mails, site e anúncios (método do modo clarify da impeccable) |
 | `/doyourshit:video` | A fábrica de vídeo (Remotion + Higgsfield), instalada no projeto e vestida com a marca |
 | `/doyourshit:treinamento` | Treino de quem entra no projeto |
