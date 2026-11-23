@@ -36,17 +36,23 @@ abrir → rodar os passos (CLAUDE e VOCÊ) → achados A1… → corrigir → re
 
 ## Instalar
 
-Na máquina onde o Claude Code roda (a VPS):
+O repositório é privado: a máquina precisa do `gh` logado numa conta com acesso a `matheuspappin/doyourshit`.
 
 ```bash
-claude plugin marketplace add /home/projetos/matheus-kit
+claude plugin marketplace add matheuspappin/doyourshit
 ```
 
 ```bash
 claude plugin install doyourshit@matheus
 ```
 
-Depois que o kit estiver num repositório do GitHub, o primeiro comando passa a ser `claude plugin marketplace add <usuario>/matheus-kit`, e funciona em qualquer máquina.
+Para pegar uma versão nova depois:
+
+```bash
+claude plugin marketplace update matheus
+```
+
+Na VPS do Matheus, o marketplace aponta para a pasta local `/home/projetos/matheus-kit`: o que muda ali vale nas próximas sessões, sem precisar de push.
 
 ## Num projeto
 
