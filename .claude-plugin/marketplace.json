@@ -1,11 +1,47 @@
 {
   "name": "matheus",
-  "owner": { "name": "Matheus Pappin" },
+  "owner": {
+    "name": "Matheus Pappin"
+  },
   "plugins": [
     {
       "name": "doyourshit",
       "source": "./",
       "description": "O método do Matheus: da ideia ao MVP em blocos que se fecham, com testes, registro e documentação."
+    },
+    {
+      "name": "ecc",
+      "source": {
+        "source": "github",
+        "repo": "affaan-m/ECC"
+      },
+      "description": "OPCIONAL E PESADO (~35 mil tokens em toda sessão, 8 hooks). ECC, de Affaan Mustafa (MIT): 427 skills e 72 agentes de engenharia. O doyourshit funciona sem ele; com ele, usa o e2e-runner, os revisores de código e os de build."
+    },
+    {
+      "name": "owasp-security-audit",
+      "source": {
+        "source": "github",
+        "repo": "ayman-benmada/owasp-security-audit"
+      },
+      "description": "OWASP Security Audit, de Ayman Benmada (MIT): auditoria contra o OWASP Top 10:2025 com relatório baseado em evidência."
+    },
+    {
+      "name": "ateam-security-audit",
+      "source": {
+        "source": "github",
+        "repo": "ateamsoftsolutio/ateam-security-audit"
+      },
+      "description": "Security Audit Loop, da ATeam Soft Solutions (MIT): auditar, corrigir, verificar e repetir, com registro de achados e um portão de liberação."
+    },
+    {
+      "name": "github-portfolio-builder",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/RachaelQuisel/github-portfolio-builder.git",
+        "path": "plugins/github-portfolio-builder"
+      },
+      "description": "GitHub Portfolio Builder, de Rachael Quisel (MIT): revisa um perfil ou repositório do GitHub como portfólio e devolve até 5 melhorias com evidência."
     }
-  ]
+  ],
+  "description": "O kit do Matheus: o método doyourshit e os plugins que ele usa (segurança, portfólio e, opcional, o ECC)."
 }

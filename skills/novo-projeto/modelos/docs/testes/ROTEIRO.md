@@ -17,6 +17,7 @@
 | --- | --- | --- | --- |
 | T0 | Base automática | 0/4 | — |
 | T1 | <área> | 0/<n> | — |
+| TS | Segurança (auditar, corrigir, verificar, portão) | 0/3 | — |
 | T<n> | Ponta a ponta com uma pessoa de verdade | 0/<n> | — |
 
 ## O caminho até o MVP
@@ -26,6 +27,7 @@
 | **1. Validar o que existe** | Saber o que funciona de verdade | T0–T<n> | Lista dos achados que bloqueiam o MVP, cada um com dono e prazo |
 | **2. Dinheiro** | Cobrança funcionando em modo de teste | T<n> | Pagar, cancelar e falhar o cartão mudam o plano sozinhos |
 | **3. Fechar as lacunas** | O que falta do "Entra agora" | T<n> | Nada bloqueante aberto |
+| **3b. Segurança** | Nada grave aberto antes de alguém de fora usar | TS | Portão da ATeam liberado |
 | **4. Ponta a ponta** | O ciclo inteiro com uma pessoa de verdade | T<n> | Ela fez tudo sozinha (e pagou) |
 
 ## Ambiente de teste
@@ -60,6 +62,14 @@
 | --- | --- | --- | --- | --- |
 | T1.1 | CLAUDE | <no navegador: abrir, clicar, preencher> | <o que deve aparecer, no banco, na rede> | [ ] |
 | T1.2 | VOCÊ | <o que só você faz> | <esperado> | [ ] |
+
+### TS. Segurança
+
+| ID | Quem | Faz | Esperado | Resultado |
+| --- | --- | --- | --- | --- |
+| TS.1 | CLAUDE | `/ateam-security-audit:security-audit`: segredos, código, dependências, infraestrutura e CI, controle de acesso e lógica de negócio | Registro de achados criado; cada um vira A<n> | [ ] |
+| TS.2 | CLAUDE | `/ateam-security-audit:security-fix` nos achados críticos e altos | Correções feitas e testadas (T0 verde) | [ ] |
+| TS.3 | CLAUDE | `/ateam-security-audit:security-verify` | Portão liberado, ou pendências decididas pelo dono | [ ] |
 
 ## Achados
 

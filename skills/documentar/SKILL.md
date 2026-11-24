@@ -45,6 +45,10 @@ Use as seções que o projeto pede, nesta ordem, e corte o que não se aplica:
 - **Leitura de quem chega:** leia como alguém de fora. Cada termo próprio do método (bloco, achado, "sua vez") é explicado na primeira vez que aparece.
 - **Textos:** passe pela `/doyourshit:textos` (modo 2).
 
+## 4b. Repositório que vai ser mostrado
+
+Repositório público, de portfólio ou para investidor: depois do README, rode o `/github-portfolio-builder:github-portfolio-builder` no repositório (e, se ele quiser, no perfil do Matheus). Aplique as melhorias que forem verdade hoje e liste as outras como pendências.
+
 ## 5. Entregar
 
 Mostre o diff do README (ou o arquivo novo) e a lista do que foi conferido e do que não foi. Commit e push só com o "sim" do Matheus. Registre (`/doyourshit:registro`).

@@ -33,7 +33,7 @@ Descubra sozinho o que der (`git remote -v`, `git branch --show-current`, `packa
 
 ## 4. Herdado: o T0 já na hora
 
-Projeto que já existe: rode os comandos de teste (é o T0) e anote o resultado com números no roteiro. Cada problema vira um achado (A1, A2…). Isso mostra em minutos o estado real do que foi recebido.
+Projeto que já existe: rode os comandos de teste (é o T0) e anote o resultado com números no roteiro. Cada problema vira um achado (A1, A2…). Isso mostra em minutos o estado real do que foi recebido. Em seguida, o diagnóstico de segurança: `/owasp-security-audit:security-audit`, só leitura, com os achados entrando como A<n> de risco A.
 
 ## 5. Fechar
 

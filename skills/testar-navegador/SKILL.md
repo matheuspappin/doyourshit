@@ -11,8 +11,8 @@ Responda em português do Brasil. O ambiente (URLs, portas, contas de teste) est
 
 | Situação | Ferramenta | Por quê |
 | --- | --- | --- |
-| Fluxo que vai se repetir (cadastro, compra, login com conta de teste por senha) | **Playwright** em `tests/e2e/` (agente `ecc:e2e-runner`) | Vira teste automático do T0 e roda sozinho a cada mudança |
-| Conferir uma tela do app que roda na máquina do Claude (localhost) | **Chrome DevTools MCP** (`mcp__plugin_ecc_chrome-devtools__*`: `new_page`, `navigate_page`, `take_snapshot`, `click`, `fill_form`, `take_screenshot`, `list_console_messages`, `list_network_requests`, `lighthouse_audit`) | Sem depender do PC dele; lê console, rede e desempenho |
+| Fluxo que vai se repetir (cadastro, compra, login com conta de teste por senha) | **Playwright** em `tests/e2e/` (com o agente `ecc:e2e-runner`, se o ECC estiver instalado; sem ele, escreva o teste direto com `@playwright/test`) | Vira teste automático do T0 e roda sozinho a cada mudança |
+| Conferir uma tela do app que roda na máquina do Claude (localhost) | **Chrome DevTools MCP**, que vem com o doyourshit, sem tela e com perfil temporário (`mcp__plugin_doyourshit_chrome-devtools__*`; se o ECC estiver instalado, o dele também serve): `new_page`, `navigate_page`, `take_snapshot`, `click`, `fill_form`, `take_screenshot`, `list_console_messages`, `list_network_requests`, `lighthouse_audit`) | Sem depender do PC dele; lê console, rede e desempenho |
 | Precisa da sessão dele já logada (Google, Stripe de teste, WhatsApp, painel da Vercel ou do Supabase) ou do site no ar | **Claude in Chrome** (`mcp__claude-in-chrome__*`), o Chrome dele | Usa os logins dele sem você ver senha |
 | App nativo, DAW, instalador, ou o que só aparece na tela dele | **Computer-use** (`mcp__computer-use__*`), com `request_access` para os apps | Você tira o print em vez de pedir |
 

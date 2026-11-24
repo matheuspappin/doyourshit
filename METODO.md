@@ -45,12 +45,14 @@ O `/doyourshit:guia` olha quais arquivos existem e chama a peça certa; você n�
 | MVP e roteiro | `/doyourshit:guia` | Falta `docs/MVP.md` ou o roteiro | Escopo cortado pelo diferencial e pelo preço |
 | Cada bloco | `/doyourshit:bloco` + agente `testador` + `/doyourshit:testar-navegador` | Roteiro com bloco aberto | Boletim, achados, ritmo medido |
 | Bloco com tela | + `/doyourshit:textos` (modo 2) e conferência da marca | O bloco mostra tela ou texto para quem usa | Achados de texto e visual (risco B) |
+| Segurança | `/doyourshit:bloco` no TS: ciclo da ATeam (`security-audit` → `security-fix` → `security-verify`) | Produto com login, dinheiro ou dado de cliente, antes da ponta a ponta | Portão de liberação; achados como A<n> de risco A |
+| Bloco de risco A | + `/owasp-security-audit:security-audit` nos arquivos do bloco | Bloco mexeu em login, dinheiro ou dados | Achados de segurança do bloco |
 | Antes da ponta a ponta | Agente `vendas`, `/doyourshit:textos` (modo 2), `/doyourshit:video` | Fechou o último bloco antes da ponta a ponta | Oferta e canais, textos revisados, vídeos curtos |
-| Lançamento | `/doyourshit:guia` (fase 6) e `/doyourshit:documentar` | Ponta a ponta fechada, ou repositório que vai ser publicado | README e manual conferidos, lista técnica; depois, roteiro por versão |
+| Lançamento | `/doyourshit:guia` (fase 6), `/doyourshit:documentar` (com o `github-portfolio-builder` no repositório que vai ser mostrado) e uma passada final do OWASP | Ponta a ponta fechada, ou repositório que vai ser publicado | README e manual conferidos, lista técnica; depois, roteiro por versão |
 | Todo dia | `/doyourshit:registro`, `/doyourshit:comecar`, `/doyourshit:relatar`, `/doyourshit:novidades` | Mudança, issue, achado, volta ao trabalho | Diário, worktree, issue, resumo |
 | Gente nova | `/doyourshit:treinamento` | Alguém entra no projeto | Treino com o progresso salvo |
 
-Projeto herdado: base e T0 primeiro (para saber o estado real); a viabilidade, a marca e a voz vêm logo em seguida, a partir do que já existe.
+Projeto herdado: base, T0 e diagnóstico OWASP primeiro (para saber o estado real); a viabilidade, a marca e a voz vêm logo em seguida, a partir do que já existe.
 
 ## 3. O bloco: o círculo que se fecha
 
@@ -180,6 +182,8 @@ Um plugin do Claude Code, o **kit**, instalado uma vez e usado em todo projeto:
 | `/doyourshit:textos` | Define a voz no começo e revisa telas, e-mails, site e anúncios (método do modo clarify da impeccable) |
 | `/doyourshit:video` | A fábrica de vídeo (Remotion + Higgsfield), instalada no projeto e vestida com a marca |
 | `/doyourshit:treinamento` | Treino de quem entra no projeto |
+| Plugins de segurança e portfólio | `owasp-security-audit` (diagnóstico), `ateam-security-audit` (o bloco TS) e `github-portfolio-builder` (repositório como portfólio), do mesmo marketplace |
+| ECC (opcional) | Pesado (~35 mil tokens em toda sessão): o kit funciona sem ele; com ele, usa o `e2e-runner`, os revisores de código e os de build |
 | Agente `testador` | Roda baterias de teste e relata números, sem editar código |
 | Agente `pesquisa-mercado` | Concorrentes, preços, reclamações, como fazer mais barato e como se destacar |
 | Agente `marca` | Posicionamento, nome, voz, cores, fontes, logo e primeiras ideias de marketing, em 2 ou 3 caminhos |

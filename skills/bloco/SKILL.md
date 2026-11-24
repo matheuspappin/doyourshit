@@ -21,6 +21,8 @@ abrir → passos do CLAUDE → "sua vez" → achados → corrigir → retestar �
 ## 2. Passos do CLAUDE: sem perguntar, sem narrar
 
 - Rode na ordem. Para telas, siga `/doyourshit:testar-navegador`. Para baterias longas, o agente `testador`.
+- **Bloco de segurança (TS):** rode o ciclo da ATeam: `/ateam-security-audit:security-audit` (varredura e registro), `/ateam-security-audit:security-fix` (correções) e `/ateam-security-audit:security-verify` (reteste e o portão de liberação). Cada achado do registro dela vira também um A<n> no roteiro, com risco A. O bloco só fecha com o portão liberado ou com cada pendência decidida pelo dono.
+- **Bloco de risco A** (login, dinheiro, dados) fora do TS: no fechamento, uma passada do `/owasp-security-audit:security-audit` só nos arquivos que o bloco mudou.
 - **Bloco que mostra tela ou texto para quem usa:** além do teste de funcionamento, passe os textos dessas telas pela `/doyourshit:textos` (modo 2, contra o `docs/VOZ.md`) e confira o visual contra o `docs/MARCA.md` (cores, fontes, logo). O que não bater vira achado de risco B.
 - **Não narre passo a passo.** Só interrompa o Matheus por: achado de risco A, bloqueio que só ele resolve, ou algo que poderia apagar dado ou gerar cobrança.
 - Guarde as evidências (prints, saídas, contagens) em `<pasta do registro>/evidencias/<bloco>/`.
@@ -56,6 +58,7 @@ Cada falha, dúvida ou dívida vira uma linha na tabela **Achados** do roteiro, 
 ## 5. Corrigir e retestar
 
 - Achado pequeno e com causa clara: corrija já, no ramo do bloco, sem perguntar. Grande ou que muda o produto: pergunte se corrige agora, adia ou leva ao dono.
+- Correção que mexe em código: antes do reteste, uma revisão do diff (o agente `ecc:code-reviewer` ou o revisor da linguagem, se o ECC estiver instalado; senão, o `/code-review` do Claude Code). Erro de build: os agentes `ecc:*-build-resolver`, se houver.
 - Depois de corrigir, rode de novo o passo que falhou **e** o T0. Só então troque `[!]` por `[x]`, com a data do reteste.
 
 ## 6. Fechar e mandar o boletim

@@ -43,7 +43,7 @@ Depois das respostas, ainda na ideia e **antes de construir**:
 
 Os agentes rodam em paralelo quando não dependem um do outro (mercado e o rascunho de custo juntos; marca depois do mercado). Cada um termina com uma pergunta para o Matheus decidir.
 
-Projeto herdado: primeiro o `/doyourshit:novo-projeto` no modo "herdado" (base e T0, para saber o estado real). Logo depois do T0, volte para cá e faça a fase 0b a partir do que o código já faz: o veredito da viabilidade, a marca e a voz que ainda não existirem. Marca e voz já existentes (um site, um logo) entram como o caminho "atual", ao lado das alternativas.
+Projeto herdado: primeiro o `/doyourshit:novo-projeto` no modo "herdado" (base, T0 e um diagnóstico de segurança com o `/owasp-security-audit:security-audit`, para saber o estado real; o que ele achar vira achados A<n>). Logo depois do T0, volte para cá e faça a fase 0b a partir do que o código já faz: o veredito da viabilidade, a marca e a voz que ainda não existirem. Marca e voz já existentes (um site, um logo) entram como o caminho "atual", ao lado das alternativas.
 
 ## 3. MVP (fase 2)
 
@@ -63,6 +63,7 @@ Monte o `docs/testes/ROTEIRO.md` a partir do modelo:
 
 - **Etapas** (de 3 a 5), cada uma com objetivo e "sai quando". O padrão: validar o que existe → dinheiro → fechar as lacunas → ponta a ponta.
 - **Blocos T0…Tn:** T0 é sempre a base automática (lint, testes, build, auditorias que o projeto já tem), e o último é sempre a ponta a ponta com uma pessoa de verdade. Um bloco por área do produto, com 5 a 9 passos.
+- **Bloco de segurança (TS)** logo antes da ponta a ponta, sempre que o produto tiver login, dinheiro ou dado de cliente: o ciclo da ATeam (auditar, corrigir, verificar, portão de liberação). Ninguém de fora usa o produto antes de o TS fechar.
 - **Cada passo:** `ID | Quem | Faz | Esperado | Resultado`. **Quem** é VOCÊ ou CLAUDE (regra na seção 6).
 - **Ambiente de teste** (o que roda onde e quem cuida) e **contas de teste** (papel e o que precisa).
 - **Placar** no topo e a tabela de **Achados** no fim.
@@ -75,7 +76,8 @@ Comece a preparar o lançamento quando o roteiro chegar à etapa de ponta a pont
 2. **Textos** (`/doyourshit:textos`, modo 2): revisão de todas as telas que a pessoa da ponta a ponta vai ver, da página de venda e dos e-mails.
 3. **Vídeo** (`/doyourshit:video`): de 1 a 3 vídeos curtos (15 a 20 s) para os canais do `docs/VENDAS.md`, com telas reais do produto já testado.
 4. **Documentação** (`/doyourshit:documentar`): o README e o manual para quem vai usar, conferidos contra o que os blocos provaram.
-5. **Lista técnica:** domínio e HTTPS, backup, termos e privacidade, pagamento fora do modo de teste (só com o "sim" do dono, porque passa a gerar cobrança), monitoramento de erros e um plano de hotfix.
+5. **Segurança final:** o TS fechado e uma passada do `/owasp-security-audit:security-audit` no projeto inteiro, com o relatório guardado na pasta do registro.
+6. **Lista técnica:** domínio e HTTPS, backup, termos e privacidade, pagamento fora do modo de teste (só com o "sim" do dono, porque passa a gerar cobrança), monitoramento de erros e um plano de hotfix.
 
 Depois do lançamento, um roteiro novo por versão (1.1, 1.2…), no mesmo formato, e a viabilidade refeita com os números reais (clientes, custo por mês, ritmo).
 

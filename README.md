@@ -48,7 +48,9 @@ Três termos que aparecem o tempo todo:
 | `gh` logado numa conta com acesso a este repositório | Instalar (o repositório é privado), issues e PRs | Sim |
 | Git | Worktrees, base e registro | Sim |
 | Node.js 20 ou mais novo | Fábrica de vídeo (Remotion) | Só para vídeo |
-| Plugin ECC (traz o Chrome DevTools e o agente `e2e-runner`) | Testes de tela sem abrir o seu navegador | Recomendado |
+| Plugins `owasp-security-audit`, `ateam-security-audit` e `github-portfolio-builder` | Diagnóstico e bloco de segurança; revisão do repositório como portfólio | Sim (vêm do mesmo marketplace, ~800 tokens juntos) |
+| Chrome ou Chromium (o `scripts/chrome-devtools.sh` acha o que já estiver na máquina, inclusive o do Playwright; se não houver, baixa um) | Testes de tela sem abrir o seu navegador; o Chrome DevTools MCP já vem no doyourshit | Sim, para testes de tela |
+| Plugin ECC | Agentes extras: `e2e-runner`, revisores de código, resolvedores de build | Opcional e pesado (~35 mil tokens em toda sessão) |
 | Extensão Claude in Chrome | Testes que precisam dos seus logins | Opcional |
 | App Claude para desktop (computer-use) | O Claude tirar print da sua tela durante um teste | Opcional |
 | Skill `recado-whatsapp` (não vem no kit) | Avisos pelo WhatsApp quando você está longe | Opcional |
@@ -62,6 +64,24 @@ claude plugin marketplace add matheuspappin/doyourshit
 
 ```bash
 claude plugin install doyourshit@matheus
+```
+
+```bash
+claude plugin install owasp-security-audit@matheus
+```
+
+```bash
+claude plugin install ateam-security-audit@matheus
+```
+
+```bash
+claude plugin install github-portfolio-builder@matheus
+```
+
+Opcional, só se você quiser o arsenal completo de engenharia (pesa ~35 mil tokens em toda sessão):
+
+```bash
+claude plugin install ecc@matheus
 ```
 
 Abra uma sessão nova do Claude Code: os comandos `/doyourshit:…` já aparecem.
@@ -84,6 +104,7 @@ Num projeto herdado, ele primeiro marca o que você recebeu e roda os testes que
 | 2. MVP | `/doyourshit:guia` | `docs/MVP.md`: o que entra agora, o que fica para depois, progresso |
 | 3. Roteiro | `/doyourshit:guia` | `docs/testes/ROTEIRO.md`: blocos, passos CLAUDE/VOCÊ, placar, achados |
 | 4. Blocos | `/doyourshit:bloco`, com o agente `testador` e `/doyourshit:testar-navegador` | Um bloco fechado por vez, com boletim |
+| 4b. Segurança (TS) | `/doyourshit:bloco` com o ciclo da ATeam: auditar, corrigir, verificar | Portão de liberação antes de alguém de fora usar |
 | 5. Ponta a ponta | `/doyourshit:bloco`; antes dele, o agente `vendas`, `/doyourshit:textos` e `/doyourshit:video` | O ciclo inteiro feito por uma pessoa de verdade; oferta, textos revisados e vídeos |
 | 6. Lançamento e depois | `/doyourshit:guia` e `/doyourshit:documentar` | Lista técnica, README, um roteiro por versão |
 
@@ -127,7 +148,8 @@ O detalhe de cada fase, as regras e o porquê estão no [METODO.md](METODO.md).
 
 | Caminho | O quê |
 | --- | --- |
-| `.claude-plugin/` | Manifesto do plugin e do marketplace `matheus` |
+| `.claude-plugin/` | Manifesto do plugin e do marketplace `matheus` (o doyourshit e os plugins de terceiros) |
+| `.mcp.json`, `scripts/chrome-devtools.sh` | O Chrome DevTools MCP, sem tela e com perfil temporário; o script acha o navegador e desliga a sandbox só onde ela não funciona |
 | `METODO.md` | O método completo |
 | `skills/<nome>/SKILL.md` | Uma pasta por comando |
 | `skills/novo-projeto/modelos/` | Os arquivos que cada projeto recebe na base |
@@ -141,12 +163,13 @@ Cada projeto guarda o que é só dele no `docs/KIT.md` (repositório, dono, coma
 
 - **Pegar a versão nova:** `claude plugin marketplace update matheus` e abra uma sessão nova.
 - **Mudar o método:** edite o `METODO.md` e a skill correspondente, suba a versão em `.claude-plugin/plugin.json`, rode `claude plugin validate .` e abra um PR.
-- **Versão atual:** 0.3.0.
+- **Versão atual:** 0.4.0.
 
 ## Créditos
 
 - O método, o registro, a viabilidade e a fábrica de vídeo: Matheus Pappin, a partir do trabalho no WavBox.
 - `comecar`, `relatar`, `novidades`, `treinamento` e o padrão do teste em outra máquina: adaptados das skills que o Figuerah criou para a equipe do WavBox.
+- Plugins de terceiros no marketplace `matheus`, instalados direto dos repositórios dos autores (licença MIT): [OWASP Security Audit](https://github.com/ayman-benmada/owasp-security-audit), de Ayman Benmada; [Security Audit Loop](https://github.com/ateamsoftsolutio/ateam-security-audit), da ATeam Soft Solutions; [GitHub Portfolio Builder](https://github.com/RachaelQuisel/github-portfolio-builder), de Rachael Quisel; e [ECC](https://github.com/affaan-m/ECC), de Affaan Mustafa. O Chrome DevTools MCP é o oficial do Google (`chrome-devtools-mcp`).
 - A revisão de textos segue o método do modo clarify da skill [impeccable](https://github.com/pbakaus/impeccable), de Paul Bakaus, que não vem copiada aqui.
 
 Uso privado; todos os direitos reservados.
